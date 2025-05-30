@@ -1,0 +1,121 @@
+.style{
+    opacity: 0.10;
+}
+
+
+.color{
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+}
+.bg-image{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    opacity: 0.5;
+}
+
+.immoral_traffic{
+   padding-left: 70px;
+   padding-bottom: 50px;
+
+}
+
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+
+  .immoral_traffic {
+    padding: 50px;
+    background-color: white;
+    transition: transform .2s; /* Animation */
+   
+    margin: 0 auto;
+  }
+  
+  .immoral_traffic:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+
+  .dowry-prohibition-act {
+    padding: 50px;
+    background-color: white;
+    transition: transform .2s; /* Animation */
+   
+    margin: 0 auto;
+  }
+  
+  .dowry-prohibition-act:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+
+  .Sati_prevention_act {
+    padding: 50px;
+    background-color: white;
+    transition: transform .2s; /* Animation */
+   
+    margin: 0 auto;
+  }
+  
+  .Sati_prevention_act:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+
+ 
+  .Domestic {
+    padding: 50px;
+    background-color: white;
+    transition: transform .2s; /* Animation */
+   
+    margin: 0 auto;
+  }
+  
+  .Domestic:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+
+  .Domestic{
+    padding-left: 70px;
+    padding-bottom: 50px;
+ 
+ }
+
+ .Prohibition_Child_Marriage_Act {
+    padding: 50px;
+    background-color: white;
+    transition: transform .2s; /* Animation */
+   
+    margin: 0 auto;
+  }
+  
+  .Prohibition_Child_Marriage_Act:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+
+
+
+  .sexual_harrassment{
+    padding: 50px;
+    background-color: white;
+    transition: transform .2s; /* Animation */
+   
+    margin: 0 auto;
+  }
+  
+  .sexual_harrassment:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+
+
+  .rights{
+   padding-left: 20px;
+   margin-left: 80px;
+   margin-right: 80px;
+
+  }
+
+  
