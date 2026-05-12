@@ -1,278 +1,244 @@
-
-<!DOCTYPE html>
-<html>
- 
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
-  <link   href="C:\xampp\htdocs\stylee.css"  rel="stylesheet" type="text/css">
-  </head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-  <style>
-    body{
-     margin: 0;
-     font-family: Arial, Helvetica, sans-serif;
-    }
-     
-    .topnav {
-     overflow: hidden;
-     background-color: #333;
-    }
-     
-    .topnav a {
-     float: left;
-     color: #f2f2f2;
-     text-align: center;
-     padding: 14px 16px;
-     text-decoration: none;
-     font-size: 17px;
-    }
-     
-    .topnav a:hover {
-     background-color: #ddd;
-     color: black;
-    }
-     
-    .topnav a.active {
-      background-color: #F4BB44;
-     color: white;
-    }
-    </style>
-  
-
-
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Women Safety Laws</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+  }
+  .topnav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: #111827;
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.12);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: slideDown 0.8s ease;
+  }
+  .topnav a {
+    color: #f8fafc;
+    padding: 16px 24px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.25s, color 0.25s;
+  }
+  .topnav a:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+  }
+  .topnav a.active {
+    background: #f59e0b;
+    color: #111827;
+  }
+  .hero {
+    padding: 80px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #3b82f6, #9333ea);
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero:after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.2), transparent 40%);
+    pointer-events: none;
+  }
+  .hero h1 {
+    font-size: clamp(2.4rem, 4vw, 4rem);
+    font-weight: 800;
+    margin: 0;
+    line-height: 1.05;
+    animation: fadeInUp 0.9s ease both;
+  }
+  .hero p {
+    margin: 18px auto 0;
+    max-width: 760px;
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.92);
+    animation: fadeInUp 1.1s ease both;
+  }
+  .section {
+    padding: 50px 20px;
+  }
+  .section h2 {
+    text-align: center;
+    font-size: 2.1rem;
+    margin-bottom: 12px;
+  }
+  .section p.subtitle {
+    max-width: 760px;
+    margin: 0 auto;
+    color: #475569;
+    text-align: center;
+    font-size: 1rem;
+  }
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    margin-top: 36px;
+  }
+  .law-card {
+    background: #ffffff;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.8s ease both;
+  }
+  .law-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 26px 54px rgba(15, 23, 42, 0.14);
+  }
+  .law-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+  }
+  .law-card .body {
+    padding: 22px;
+  }
+  .law-card h3 {
+    margin: 0 0 12px;
+    font-size: 1.2rem;
+    color: #111827;
+  }
+  .law-card p {
+    margin: 0;
+    color: #475569;
+    line-height: 1.75;
+  }
+  .law-card a {
+    margin-top: 16px;
+    display: inline-block;
+    color: #4f46e5;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .law-card a:hover {
+    text-decoration: underline;
+  }
+  .highlight {
+    background: #111827;
+    color: #f8fafc;
+    border-radius: 24px;
+    padding: 30px;
+    margin-top: 40px;
+    box-shadow: 0 22px 45px rgba(15, 23, 42, 0.15);
+  }
+  .law-list {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+  .law-list li {
+    margin-bottom: 18px;
+    font-size: 1rem;
+    color: #334155;
+    line-height: 1.8;
+  }
+  .law-list b {
+    color: #0f172a;
+  }
+  @keyframes fadeInUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes slideDown { from { transform: translateY(-100%); } to { transform: translateY(0); } }
+</style>
+</head>
 <body>
-   
- 
-    <div class="topnav">
-    <a href="newhome.html">Home</a>
-     <a class="active" href="lawpage.html">Laws</a>
-     <a href="Scl.html">Scholarships</a>
-     <a href="defence.html">Self-Defence</a>
-     <a href="Contact.html">Emergency Contacts</a>
+<div class="topnav">
+  <a href="newhome.html">Home</a>
+  <a class="active" href="lawpage.html">Laws</a>
+  <a href="Scl.html">Scholarships</a>
+  <a href="defence.html">Self-Defence</a>
+  <a href="Contact.html">Emergency Contacts</a>
+</div>
+<section class="hero">
+  <h1>Essential Laws for Women’s Safety & Empowerment</h1>
+  <p>Learn about the legal protections that guard women from violence, exploitation, and discrimination. These acts help create a safer, stronger future for every woman.</p>
+</section>
+<section class="section">
+  <div class="container">
+    <div>
+      <h2>Key Acts and Resources</h2>
+      <p class="subtitle">Browse the most important women's safety laws in India, with direct links to further reading and summaries of why each law matters.</p>
     </div>
-      
-     
-      <hr style="width:100%;text-align:left;margin-left:0">
-
-     <center> <h1 style="color:orange;">LAWS FOR WOMENS SAFETY & RIGHTS </h1></center>
-     
-
-
-  <div class="row">
-  <div class="column">  
-    <a href="https://www.indiacode.nic.in/bitstream/123456789/15100/1/immoral_traffic_prevention_act_%28itpa%29_1956.pdf">
-    <div class="immoral_traffic" >
-    <img src="immoral_traffic.jpg" alt="Description for image" width="300" height="250"  >
-    <figcaption> Immoral traffic Prevention Act 1956 </figcaption>
-    </a>
+    <div class="card-grid">
+      <div class="law-card" style="animation-delay: 0.1s;">
+        <img src="immoral_traffic.jpg" alt="Immoral Traffic Prevention Act">
+        <div class="body">
+          <h3>Immoral Traffic (Prevention) Act, 1956</h3>
+          <p>This act helps prevent trafficking and protects women from criminal exploitation, with special provisions for rehabilitation and rescue.</p>
+          <a href="https://www.indiacode.nic.in/bitstream/123456789/15100/1/immoral_traffic_prevention_act_%28itpa%29_1956.pdf" target="_blank">Read the act</a>
+        </div>
+      </div>
+      <div class="law-card" style="animation-delay: 0.2s;">
+        <img src="dowry_prohibition_act.jpg" alt="Dowry Prohibition Act">
+        <div class="body">
+          <h3>Dowry Prohibition Act, 1961</h3>
+          <p>Criminalises demanding or giving dowry and supports women who face abuse related to marriage and in-law pressure.</p>
+          <a href="https://www.indiacode.nic.in/bitstream/123456789/5556/1/dowry_prohibition.pdf" target="_blank">Read the act</a>
+        </div>
+      </div>
+      <div class="law-card" style="animation-delay: 0.3s;">
+        <img src="domestic_voilence.jpg" alt="Domestic Violence Act">
+        <div class="body">
+          <h3>Domestic Violence Act, 2005</h3>
+          <p>Offers legal protection to women against physical, emotional, sexual, and economic abuse in domestic settings.</p>
+          <a href="https://en.wikipedia.org/wiki/Protection_of_Women_from_Domestic_Violence_Act,_2005" target="_blank">Read the act</a>
+        </div>
+      </div>
+      <div class="law-card" style="animation-delay: 0.4s;">
+        <img src="Sati_prevention_act.jpg" alt="Commission of Sati (Prevention) Act">
+        <div class="body">
+          <h3>Commission of Sati (Prevention) Act, 1987</h3>
+          <p>Prohibits the practice of sati and protects women from forced self-immolation through strict punishment and rescue measures.</p>
+          <a href="https://wcd.nic.in/act/commission-sati-prevention-act-1987" target="_blank">Read the act</a>
+        </div>
+      </div>
+      <div class="law-card" style="animation-delay: 0.5s;">
+        <img src="child_marrige_act.jpg" alt="Prohibition of Child Marriage Act">
+        <div class="body">
+          <h3>Prohibition of Child Marriage Act, 2006</h3>
+          <p>Protects young girls from early marriage by making child marriage illegal and offering legal remedies for victims.</p>
+          <a href="https://bba.org.in/wp-content/uploads/pdf/the-prohibition-of-child-marriage-act.pdf" target="_blank">Read the act</a>
+        </div>
+      </div>
+      <div class="law-card" style="animation-delay: 0.6s;">
+        <img src="sexual_harrassment.jpg" alt="Sexual Harassment Act">
+        <div class="body">
+          <h3>Sexual Harassment Act, 2013</h3>
+          <p>Protects women at the workplace by creating safe reporting systems and legal penalties for harassment and discrimination.</p>
+          <a href="https://en.wikipedia.org/wiki/Sexual_Harassment_of_Women_at_Workplace_(Prevention,_Prohibition_and_Redressal)_Act,_2013" target="_blank">Read the act</a>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <h3>How these laws empower women</h3>
+      <p>The acts above offer formal protection, help survivors access support, and encourage awareness of rights. They are the foundation of a safer environment, stronger justice, and more equitable treatment for women.</p>
+    </div>
+    <div class="law-list">
+      <ol>
+        <li><b>Immoral Traffic (Prevention) Act</b> stops trafficking and provides support services for survivors.</li>
+        <li><b>Dowry Prohibition Act</b> prevents dowry-related abuse and protects married women from financial exploitation.</li>
+        <li><b>Protection of Women from Domestic Violence Act</b> gives legal remedies and safe shelters for domestic abuse victims.</li>
+        <li><b>Commission of Sati (Prevention) Act</b> bans forced sati and punishes those who promote or allow it.</li>
+        <li><b>Prohibition of Child Marriage Act</b> safeguards girl children by preventing child marriage and underage unions.</li>
+        <li><b>Sexual Harassment of Women at Workplace Act</b> ensures a safe work environment with complaint mechanisms and penalties.</li>
+      </ol>
+    </div>
   </div>
-  </div>
-
-  <div class="column">
-    <a href="https://www.indiacode.nic.in/bitstream/123456789/5556/1/dowry_prohibition.pdf">
-  <div class="dowry-prohibition-act" >
-    <img src="dowry_prohibition_act.jpg" alt="Description for image" width="300" height="250">
-    <figcaption> The Dowry Prohibition Act, 1961 (28 of 1961)  </figcaption>
-  </a>
-  </div>
-</div>
-
-<div class="column">
-  <a href="https://wcd.nic.in/act/commission-sati-prevention-act-1987">
-<div class="Sati_prevention_act" >
-  <img src="Sati_prevention_act.jpg" alt="Description for image" width="300" height="250">
-  <figcaption> The Commission of Sati (Prevention) Act, 1987  </figcaption>
-</a>
-</div>
-</div>
-
-</div>
-
-
-
-
-
-         
-<div class="row">
-  <div class="column">  
-    <a href="https://lddashboard.legislative.gov.in/actsofparliamentfromtheyear/protection-women-domestic-violence-act-2005">
-    <div class="Domestic" >
-    <img src="domestic_voilence.jpg" alt="Description for image" width="300" height="250"  >
-    <figcaption> Domestic Violence Act, 2005 </figcaption>
-    </a>
-  </div>
-  </div>
-
-  <div class="column">
-    <a href="https://bba.org.in/wp-content/uploads/pdf/the-prohibition-of-child-marriage-act.pdf">
-  <div class="Prohibition_Child_Marriage_Act" >
-    <img src="child_marrige_act.jpg" alt="Description for image" width="300" height="250">
-    <figcaption> Prohibition of Child Marriage Act,2006 </figcaption>
-  </a>
-  </div>
-</div>
-
-<div class="column">
-  <a href="https://en.wikipedia.org/wiki/Sexual_Harassment_of_Women_at_Workplace_(Prevention,_Prohibition_and_Redressal)_Act,_2013">
-<div class="sexual_harrassment" >
-  <img src="sexual_harrassment.jpg" alt="Description for image" width="300" height="250">
-  <figcaption> The Sexual Harassment of Women at Work Place (Prevention, Protection and) Act, 2013. </figcaption>
-</a>
-</div>
-</div>
-
-</div>
-
-
-
-<div class="bg-image" style="
-      background-image: url('powerfullimage.jpg');
-      height: 50vh;
-    "></div>
-
-
-
-
-<font SIZE="5" >
-  <font color="gray">
-   <ol>
-   <ul>
-     <li>
-  <p>ACTS</p>
- </li>
-</ul>
-<li>
-<ul>
-<p> The Immoral <a href="https://www.google.com">Traffic (Prevention) Act, 1956 (172.32 KB)</a></p>
-</li>
-</ul>
-<li>
-<ul>
-   <p>The<a href="https://wcd.nic.in/dowry-prohibition-act-1961-28-1961"> Dowry Prohibition Act, 1961 (28 of 1961) (Amended in 1986) (239.43 KB)
-   (172.32 KB)</a></p>
- </li>
-</ul>
-<li>
-<ul>
-   <p>The<a href="https://wcd.nic.in/commission-sati-prevention-act-1987-3-1988-excluding-administration-criminal-justice-regard-offences"> Commission of Sati (Prevention) Act, </a>1987 (3 of 1988) (294.55 KB)</p>
- </li>
-</ul>
-</li>
-  </ul>
- <li>
-<ul>
-
-  <p> Protection of Women from<a href="https://en.wikipedia.org/wiki/Protection_of_Women_from_Domestic_Violence_Act,_2005"> Domestic Violence </a>Act, 2005 (330.96 KB)</p>
-     </li>
-  </ul>
-  </ol>
-  </font>
-
-
-
-
-
-
-  <font color="black">  
-   <font size="4"> 
-     <div class="color">
-<ol>
-<ul>
- <li>
-<p>The Government has also taken a number of initiatives for safety of women and girls, which are given below:</p>
-</li>
-</ul>
-<ul>
-<li>
-The Government has set up<a href="https://timesofindia.indiatimes.com/india/what-is-nirbhaya-case/articleshow/72868430.cms"> Nirbhaya Fund </a>for projects for safety and  security  of  women, for  which  Ministry  of  Women and Child Development is the nodal authority for appraising/ recommending the proposals / schemes to be funded under Nirbhaya Fund.
-</ul>
-</li>
-
-<ul>
-<li>
- In order to facilitate States/UTs, MHA has launched an online analytic tool for police on 19th February 2019 called “Investigation Tracking System for Sexual Offences” to monitor and track time-bound investigation in sexual assault cases in accordance with Criminal Law (Amendment) Act 2018.
-</ul>
- </li>
-
- <ul>
-   <li>MHA has launched the “National Database on Sexual Offenders” (NDSO) on 20th September 2018 to facilitate investigation and tracking of sexual offenders across the country by law enforcement agencies. NDSO has data of over 5 lakh sexual offenders.
-   </ul>
-     </li>
-
-     <ul>
-       <li>
-         Emergency Response Support System, which provides a single emergency number (112) based computer aided dispatch of field resources to the location of distress has been operationalized in 20 States/ UTs in 2018-19.
-       </ul>
-         </li>
-
-         
-     <ul>
-       <li>
-         Using technology to aid smart policing and safety management, Safe City Projects have been sanctioned in phase I in 8 cities (Ahmedabad, Bengaluru, Chennai, Delhi, Hyderabad, Kolkata, Lucknow and Mumbai).
-       </ul>
-     </li>
-     
-         
-     <ul>
-       <li>
-         Ministry of Women and Child Development has also introduced the scheme of One Stop Centres to provide integrated support and assistance to women affected by violence and a Scheme for Universalisation of Women Helpline to provide 24 hours emergency and non-emergency response to women affected by violence. Apart from above, the Ministry of Women and Child Development in collaboration with the Ministry of Home Affairs has envisaged engagement of Mahila Police Volunteers in States/UTs who will act as a link between police and community and facilitate women in distress.
-       </ul>
-     </li>
-         
-         
-     <ul>
-       <li>
-         Further, Government of India conducts awareness generation programmes and publicity campaigns on various laws relating to women and their rights through workshops, cultural programmes, seminars, training programmes, advertisements in print and electronic media etc.
-       </ul>
-     </li>
-
-
-
-</font> 
-</font>
-</div>
-
-
-<div class="bg-image" style="
-      background-image: url('right.jpeg');
-      height: 50vh;
-    "></div>
-
-
-<div class="xyz">
-  <font color="orange">
-<CENTER><h1>RIGHT'S OF WOMENS</h1></CENTER>
-</font color>
-</div>
-
-<div class="rights">
-<h3>Constitutional rights available to women in India-</h3>
-
-<font size="4">
-  <ul>
-<li><p>Fundamental right to equality before Law that is, equal protection of laws in India-   Article 14</p></li>
-<li>Prohibition of discrimination on grounds of religion, race, caste, sex or place of birth.However art 15(3) empowers state to make any special provision for women and children -Article 15</li>
-<li>Equality of opportunity in matters of public employment or opportunity to any office under state and prohibits discrimination on ground of sex- Article 16</li>
-<li>Freedom of speech and expression and freedom to practice any profession or to carry out any occupation , trade or business – Article 19</li>
-<li>Protection of life and personal liberty- Article 21</li>
-<li>Right to Privacy- Article 21</li>
-<li>Right to property- Art. 300-A</li>
-<li>Political rights- women reservation in for instance, panchayats. Art 15 of the Constitution allows special provisions for women and children to be made for their welfare.</li>
-<li>Under the Legal Services Authorities Act women and children are entitled to free legal aid .</li>
-<li>Under the Constitution of India , the Directive Principles of State Policy contain duties of the State to apply these principles while making laws.These principles state that state shall direct its policies to secure that citizens , men and women equally have the right to an adequate means of livelihood, that there is equal pay for both men and women, provide free and compulsory education for children and duty to improve public health.Whereasincase of violation of fundamental rights , these rights are enforceable , that is , a victim can seek legal redress through a court of law , the directive principles are only a guiding factor and its non observance is not actionable before court of law.</li>
-
-</ul>
-  <center>
-    <h6>
-<p>for download pdf of more rights <a href="https://mospi.gov.in/sites/default/files/reports_and_publication/cso_social_statices_division/Rights.doc">click here</a></p>
-</h6>
-</center>
-
+</section>
 </body>
 </html>
